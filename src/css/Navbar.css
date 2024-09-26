@@ -1,0 +1,96 @@
+/* Navbar.css */
+
+/* Custom Color Scheme */
+.custom-navbar {
+    background-color: #1c1c1e; /* Dark background */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .custom-navbar .brand {
+    color: #00d1b2; /* Accent color for brand (Teal) */
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .custom-navbar .brand:hover {
+    color: #00bfa5; /* Darker Teal on hover */
+  }
+  
+  .navbar-dark .navbar-toggler {
+    border: none; /* Remove default border */
+  }
+  
+  .navbar-toggler {
+    background-color: #00bfa5; /* Accent color for toggle button */
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .navbar-toggler svg {
+    color: #fff; /* White color for toggle icons */
+  }
+  
+  .navbar-toggler.open svg {
+    color: #ff6b6b; /* Cross icon in red when open */
+  }
+  
+  .custom-navbar .navbar-collapse {
+    background-color: #ffffff; /* Ensure consistent background color */
+    transition: max-height 0.3s ease; /* Smooth transition */
+  }
+  
+  .custom-navbar .navbar-collapse.show {
+    max-height: 100%;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #f5f5f7; /* Light color for text */
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #00d1b2; /* Teal color on hover */
+  }
+  
+  .navbar-nav .nav-link i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .navbar-nav .active {
+    color: #ff6b6b; /* Highlight the active link in a contrasting color */
+  }
+  
+  .navbar-collapse.collapse {
+    display: none;
+  }
+  
+  .navbar-collapse.show {
+    display: flex;
+    background-color: #1c1c1e; /* Dark background when navbar opens */
+    padding: 10px;
+  }
+  
+  @media (max-width: 992px) {
+    .custom-navbar .navbar-collapse {
+      position: absolute;
+      top: 56px; /* Adjust based on navbar height */
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    .custom-navbar .navbar-collapse.show {
+      max-height: 500px;
+    }
+  
+    .navbar-toggler {
+      position: relative;
+      z-index: 10000;
+    }
+  }
+  
