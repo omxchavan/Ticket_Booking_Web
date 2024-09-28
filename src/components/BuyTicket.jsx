@@ -51,7 +51,7 @@ const BuyTicket = () => {
   }
   const verifyPayment = async () => {
     try {
-      let res = await axios.post("http://locahost:5000/verify",{
+      let res = await axios.post("http://locahost:5001/verify",{
         orderId: orderId
       })
       if(res && res.data){
