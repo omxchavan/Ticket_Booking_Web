@@ -32,7 +32,7 @@ const BuyTicket = () => {
   let cashfree;
   let initializeSDK = async function name(params) {
     cashfree = await load({
-      mode: "sandbox",
+      mode: "production",
     })
   }
   initializeSDK();
